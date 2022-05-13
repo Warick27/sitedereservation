@@ -1,0 +1,959 @@
+/* ---- Plusieurs parties :  Header, Main, Footer. Main est subdivisés en plusieurs parties. ---- */
+
+/* ---- Général ---- */
+
+* {
+  box-sizing: border-box;
+  color: black;
+  font-family: "Raleway", sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 650;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ---- Header ----*/
+
+#en_tete {
+  margin: 0 2%;
+  padding: 0;
+}
+
+#logo img {
+  height: auto;
+  max-width: 50%;
+}
+
+#tete_barre {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#lien_gauche,
+#lien_droite {
+  display: inline-block;
+  margin: 20px 20px 0 20px;
+}
+.menu a {
+  padding-top: 30px;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 992px) {
+  .menu a:link {
+    color: black;
+  }
+
+  .menu a:hover {
+    border-top: 3px solid #0065fc;
+    color: #0065fc;
+  }
+}
+
+/* ---- Main ---- */
+
+main {
+  margin: 0 2% 2% 2%;
+}
+
+/* ---- Main : Pitch ---- */
+
+#pitch {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* ---- Main : Recherche ---- */
+
+#formulaire {
+  margin-bottom: 10px;
+}
+
+#recherche {
+  display: flex;
+  flex-direction: row;
+}
+
+#recherche i {
+  object-fit: cover;
+  padding: 11px 15px 11px 15px;
+  border-radius: 10px 0 0 10px;
+  background-color: #f2f2f2;
+}
+
+#marecherche {
+  padding: 10px;
+  text-align: center;
+  width: 20%;
+}
+
+::placeholder {
+  font-weight: 650;
+  font-size: 16px;
+  opacity: 1;
+}
+
+input {
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+}
+
+input:placeholder-shown {
+  border: 1px solid #f2f2f2;
+}
+
+#bouton {
+  border: 1px solid #0065fc;
+  border-radius: 0 10px 10px 0;
+  display: inline-block;
+  font-weight: 600;
+  padding: 10px 15px;
+}
+
+.texte_bouton {
+  color: white;
+}
+
+#bouton i {
+  display: none;
+}
+
+.couleur {
+  background-color: #0065fc;
+}
+
+/*  ---- Main : Filtre ----*/
+
+#filtres {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 700;
+  height: fit-content;
+  margin-bottom: 10px;
+}
+
+#filtres i {
+  display: flex;
+  justify-content: center;
+  width: 37px;
+  height: 37px;
+  padding: 10px 8px 8px 8px;
+  border-radius: 50%;
+  color: #0065fc;
+  background-color: #deebff;
+  margin-right: 10px;
+}
+
+.filtre_type {
+  display: flex;
+  margin-left: 10px;
+  border-radius: 35px;
+  border: 2px solid #f2f2f2;
+  border-left: none;
+  align-items: center;
+  margin-right: 10px;
+}
+
+#filtres ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 0;
+  margin-left: 40px;
+}
+
+#filtres a {
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;
+}
+
+#filtres a:hover {
+  color: #0065fc;
+}
+
+/* --- Main : Info ---*/
+
+#info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#info i {
+  display: flex;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #f2f2f2;
+  border-radius: 50%;
+  margin-right: 10px;
+  padding-top: 2px;
+  color: #0065fc;
+}
+
+/* ---- Main : Choix ---- */
+
+#choix {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+}
+
+/* ---- Main : Choix partie hébergement ---- */
+
+#hebergements {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 69%;
+  min-height: 650px;
+  border-radius: 25px;
+  padding: 2%;
+  background-color: #f2f2f2;
+  margin: 1% 1% 1% 0;
+}
+
+#hebergements_mini {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 80%;
+  background-color: #11ffee00;
+}
+
+#hebergements img {
+  width: 100%;
+  height: 125px;
+  border-radius: 25px 25px 0 0;
+  object-fit: cover;
+}
+
+#hebergements_mini a {
+  width: 31%;
+  max-height: 47%;
+  border-radius: 25px;
+  padding-left: 0;
+  background-color: white;
+  border: 4px solid #11ffee00;
+  box-shadow: 2px 2px 5px 1px grey;
+}
+
+.legende_colonne {
+  display: flex;
+  flex-direction: column;
+  padding: 3% 3% 3% 5%;
+}
+
+.legende_colonne,
+.legende_ligne {
+  margin-bottom: 5px;
+}
+
+.location {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nuit {
+  font-size: 14px;
+}
+
+.legende_colonne p,
+.legende_ligne p {
+  padding-bottom: 10px;
+}
+
+.classement .fas {
+  color: #0065fc;
+  font-size: 16px;
+}
+
+.far {
+  color: lightslategray;
+}
+
+.classement {
+  display: flex;
+  flex-direction: row;
+}
+
+#plus {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Main : Choix partie populaires ---- */
+
+#populaires {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  min-height: 675px;
+  border-radius: 25px;
+  padding: 2%;
+  background-color: #f2f2f2;
+  margin: 1% 0 1% 1%;
+}
+
+#populaires header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px 0 10px;
+}
+
+#populaires header i {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  padding-top: 4px;
+}
+
+#populaires_mini {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #11ffee00;
+}
+
+#populaires_mini a {
+  height: 30%;
+  border-radius: 25px;
+  background-color: white;
+  border: 4px solid #11ffee00;
+  box-shadow: 2px 2px 5px 1px grey;
+}
+
+.legende_ligne {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: space-between;
+  width: 55%;
+  padding: 3% 3% 3% 5%;
+}
+
+#populaires img {
+  display: flex;
+  object-fit: cover;
+  width: 40%;
+  border-radius: 25px 0 0 25px;
+}
+
+#populaires_mini figure {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  border-radius: 25px;
+  background-color: white;
+}
+
+/* ---- Main : Activités ---- */
+
+#activites {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  height: 550px;
+}
+
+#activites_mini {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 85%;
+}
+
+#activites_mini p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  padding: 15px;
+}
+
+.carte_min,
+.carte_max {
+  width: 23%;
+  height: 100%;
+}
+
+.carte_min {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#activites_mini figure {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.activite_max {
+  display: flex;
+  height: 100%;
+  border-radius: 25px;
+  box-shadow: 2px 2px 5px 1px grey;
+}
+
+.activite_max img {
+  border-radius: 25px 25px 0 0;
+  object-fit: cover;
+  height: 92%;
+}
+
+.activite_grande {
+  display: flex;
+  height: 52%;
+  border-radius: 25px;
+  box-shadow: 2px 2px 5px 1px grey;
+}
+
+.activite_grande img {
+  border-radius: 25px 25px 0 0;
+  object-fit: cover;
+  height: 84%;
+}
+
+#activite_petite {
+  display: flex;
+  height: 35%;
+  border-radius: 25px;
+  box-shadow: 2px 2px 5px 1px grey;
+}
+
+#activite_petite img {
+  border-radius: 25px 25px 0 0;
+  object-fit: cover;
+  height: 77%;
+}
+
+#activite_moyenne {
+  display: flex;
+  height: 42%;
+  border-radius: 25px;
+  box-shadow: 2px 2px 5px 1px grey;
+}
+
+#activite_moyenne img {
+  border-radius: 25px 25px 0 0;
+  object-fit: cover;
+  height: 81%;
+}
+
+/* ---- Footer ---- */
+
+footer {
+  background-color: #f2f2f2;
+  margin-top: 20px;
+  padding: 2% 0;
+}
+
+#pied {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-left: 2%;
+}
+
+#pied div {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+#pied ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.lien_bas {
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 764px) and (max-width: 992px) {
+  /* ---- Header ---- */
+  #en_tete {
+    margin: 3% 3% 0 5%;
+  }
+
+  #logo img {
+    max-width: 70%;
+  }
+
+  .menu {
+    font-size: 18px;
+  }
+
+  .menu a {
+    margin-right: initial;
+  }
+
+  /* ---- Main ---- */
+
+  main {
+    margin: 2% 0;
+  }
+
+  /* ---- Main : Pitch ---- */
+
+  .introduction {
+    margin: 20px;
+  }
+
+  /* ---- Main : Recherche ---- */
+
+  #formulaire,
+  #filtres {
+    margin: 20px 0;
+  }
+
+  input {
+    width: 75%;
+  }
+
+  #marecherche {
+    width: 50%;
+  }
+
+  #recherche {
+    justify-content: center;
+  }
+
+  /*  ---- Main : Filtre ----*/
+
+  #filtres ul {
+    padding-left: 0;
+    margin-left: 10px;
+  }
+
+  #filtres li {
+    font-size: 16px;
+    align-items: center;
+  }
+
+  /* ---- Main : Choix ---- */
+
+  #choix {
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  /* ---- Main : Choix partie hébergement ---- */
+
+  #hebergements {
+    height: 850px;
+    margin-right: 0;
+    background-color: initial;
+    padding: 0 2%;
+    border-radius: 0;
+    order: 1;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .location {
+    font-size: 18px;
+  }
+
+  .legende_colonne {
+    height: 15%;
+    margin-bottom: initial;
+  }
+
+  .legende_ligne {
+    margin-bottom: initial;
+  }
+
+  .nuit {
+    font-size: 16px;
+  }
+
+  #plus {
+    margin-top: 10px;
+  }
+
+  #hebergements_mini {
+    height: 92%;
+    padding: 0 0 10px 0;
+  }
+
+  #hebergements_mini a {
+    width: 48%;
+  }
+
+  /* Main : Choix partie populaires ---- */
+
+  #populaires {
+    order: 2;
+    width: 100%;
+    padding: 0 5%;
+    margin-top: 35px;
+    margin-left: 0;
+    border-radius: 0;
+    justify-content: space-evenly;
+  }
+
+  #populaires_mini {
+    height: 550px;
+  }
+
+  /* ---- Main : Activités ---- */
+
+  #activites {
+    height: 1550px;
+    padding: 0 5%;
+    margin-top: 35px;
+  }
+
+  #activites_mini {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  #activites img {
+    height: 80%;
+  }
+
+  .carte_max,
+  .carte_min {
+    width: 100%;
+    padding: 2px;
+    margin-bottom: 20px;
+  }
+
+  #activites a {
+    height: 225px;
+  }
+
+  .activite_grande,
+  #activite_moyenne {
+    margin-bottom: 23px;
+  }
+
+  /* ---- Footer ---- */
+
+  #pied {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 764px) {
+  /* ---- Général ---- */
+
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  /* ---- Header ----*/
+
+  .menu {
+    display: flex;
+    width: 100%;
+  }
+
+  #logo {
+    width: 80px;
+  }
+
+  #tete_barre {
+    flex-direction: column;
+  }
+
+  #logo img {
+    max-width: 150%;
+  }
+
+  #lien_gauche,
+  #lien_droite {
+    margin: 20px 0 0 0;
+  }
+
+  .menu ul {
+    width: 100%;
+    display: flex;
+  }
+
+  .menu li {
+    width: 50%;
+    text-align: center;
+    padding-bottom: 15px;
+    padding: 5%;
+    border-bottom: 3px solid #f2f2f2;
+  }
+
+  .menu li:hover {
+    border-bottom: 3px solid #0065fc;
+  }
+
+  .menu li:hover :nth-child(-n + 2) {
+    color: #0065fc;
+  }
+
+  .menu a {
+    font-size: 20px;
+  }
+
+  #en_tete,
+  footer {
+    margin: 20px 0 5px 0;
+  }
+
+  /* ---- Main ---- */
+
+  main {
+    margin: 5px 0;
+  }
+
+  /* ---- Main : Pitch ---- */
+
+  .introduction {
+    padding: 0 5%;
+  }
+
+  .introduction p {
+    font-size: 16px;
+  }
+
+  /* ---- Main : Recherche ---- */
+
+  #formulaire {
+    margin: 20px 0 20px 8px;
+  }
+
+  #marecherche {
+    width: 70%;
+  }
+
+  .texte_bouton {
+    display: none;
+  }
+
+  #recherche {
+    justify-content: center;
+  }
+
+  #bouton i {
+    display: block;
+    background-color: #11ffee00;
+    color: white;
+  }
+
+  #bouton {
+    padding: 0;
+    border-radius: 10px;
+    position: relative;
+    left: -8px;
+  }
+
+  /*  ---- Main : Filtre ----*/
+
+  #filtres {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+
+  #filtres ul {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: initial;
+    margin-left: 0;
+  }
+
+  #filtres li {
+    margin: 0 0 15px 0;
+  }
+
+  .filtre_type {
+    width: fit-content;
+  }
+
+  /* --- Main : Info ---*/
+
+  #info p {
+    font-size: 16px;
+  }
+
+  /* ---- Main : Choix ---- */
+  #choix {
+    flex-direction: column;
+  }
+
+  /* ---- Main : Choix partie hébergement ---- */
+
+  #hebergements {
+    order: 2;
+    width: 100%;
+    height: 1600px;
+    margin-right: 0;
+    background-color: initial;
+    padding: 0 5%;
+    margin-top: 5%;
+    border-radius: 0;
+  }
+
+  #hebergements_mini {
+    height: 92%;
+  }
+
+  #hebergements_mini a {
+    aspect-ratio: initial;
+    width: 100%;
+    max-height: 16%;
+  }
+
+  /* Main : Choix partie populaires ---- */
+
+  #populaires {
+    order: 1;
+    width: 100%;
+    padding: 0 5%;
+    margin-top: 5%;
+    margin-left: 0;
+    border-radius: 0;
+  }
+
+  #populaires header {
+    margin-bottom: 20px;
+    padding-top: 2%;
+  }
+
+  #populaires_mini {
+    height: 550px;
+  }
+
+  /* ---- Main : Activités ---- */
+
+  #activites {
+    height: 1550px;
+    padding: 0 5%;
+    margin-top: 5%;
+  }
+
+  #activites_mini {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  #activites img {
+    height: 80%;
+  }
+
+  .carte_max,
+  .carte_min {
+    width: 100%;
+    padding: 2px;
+    margin-bottom: 20px;
+  }
+
+  #activites a {
+    height: 225px;
+  }
+
+  .activite_grande,
+  #activite_moyenne {
+    margin-bottom: 23px;
+  }
+
+  /* ---- Footer ---- */
+
+  #pied {
+    flex-direction: column;
+    padding-left: 5%;
+  }
+
+  #pied div {
+    width: initial;
+  }
+}
+
+/* Reset CSS*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+p,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+body,
+html,
+aside {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
